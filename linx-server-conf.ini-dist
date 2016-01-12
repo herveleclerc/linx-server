@@ -1,0 +1,66 @@
+#Common Options
+
+# What to bind to (default is 127.0.0.1:8080)
+#bind=127.0.0.1:8080
+
+# The site name displayed on top (default is linx)
+#sitename=myLinx
+
+# The site url (for generating links)
+#siteurl="http://mylinx.example.org/"
+
+# Path to store uploads (default is files/)
+#filespath=files/" 
+
+# Path to store information about uploads (default is meta/)
+#metapath=meta/
+
+# Maximum upload file size in bytes (default 4GB)
+#maxsize=4294967296
+
+# Allow file hotlinking
+#allowhotlink=true
+
+# Content-Security-Policy header for pages (default is "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; referrer origin;")
+#contentsecuritypolicy="..."
+
+# Content-Security-Policy header for files (default is "default-src 'none'; img-src 'self'; object-src 'self'; media-src 'self'; referrer origin;")
+#filecontentsecuritypolicy="..."
+
+# X-Frame-Options header (default is "SAMEORIGIN")
+#xframeoptions="..." 
+
+# Enable remote uploads (/upload?url=https://...) (optionally)
+#remoteuploads=true
+
+# Disable request logs in stdout (optionally)
+#-nologs=true
+
+# SSL with built-in server
+
+# Path to the ssl certificate (required if you want to use the https server)
+#certfile=path/to/your.crt
+
+# Path to the ssl key (required if you want to use the https server)
+#keyfile=path/to/your.key
+
+
+# Use with http proxy
+
+# let linx-server know you (nginx, etc) are providing the X-Real-IP and/or X-Forwarded-For headers.
+#realip=true
+
+
+# Use with fastcgi
+
+#Serve through fastcgi
+#fastcgi=true
+
+
+# Require API Keys for uploads
+
+# Require authorization for upload/delete by providing a newline-separated file of scrypted auth keys (optionally)
+#authfile=path/to/authfile
+
+# Require authorization for remote uploads by providing a newline-separated file of scrypted auth keys (optionally)
+#remoteauthfile=path/to/remoteauthfile

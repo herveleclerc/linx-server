@@ -1,0 +1,35 @@
+# First Solution
+#linx-server:
+#  image: alterway/linx-server
+#  ports:
+#    - 8080
+#  volumes:
+#    - ./linx-server-conf.ini:/linx-server-conf.ini
+#  command: -config /linx-server-conf.ini
+
+# Second Solution
+linx-server:
+  image: herve/linx-server
+  ports:
+    - 80
+  command: app 
+           -bind 0.0.0.0:8080 
+           -sitename filesway 
+           -siteurl "http://filesway.alterway.fr/" 
+           -remoteuploads 
+           -filespath /linxserver/files/ 
+           -metapath /linxserver/meta/ 
+           -maxsize 4294967296 
+           -allowhotlink 
+           #-contentsecuritypolicy "..." 
+           #-filecontentsecuritypolicy "..." 
+           #-xframeoptions "..." 
+           #-nologs
+           #-certfile path/to/your.crt
+           #-keyfile path/to/your.key
+           #-realip
+           #-fastcgi
+           #-authfile path/to/authfile
+           #-remoteauthfile path/to/remoteauthfile
+  volumes:
+    - linxserver:/linxserver

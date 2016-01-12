@@ -1,0 +1,11 @@
+.git/
+.gitignore
+LICENSE
+LICENSE.txt
+VERSION
+README.md
+Changelog.md
+Makefile
+docker-compose.yml
+build/
+Godeps/
